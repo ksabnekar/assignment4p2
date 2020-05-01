@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block breadcrumb %}
+    <li class="breadcrumb-item active">Your results</li>
+{% endblock %}
+
+{% block content %}
+
+<p>You scored {{ score }}%</p>
+
+<ul>
+  <li><a href="{{ section.get_next_section_url }}">Next section</a></li>
+  <li><a href="{{ section.get_test_url }}">Try again</a></li>
+</ul>
+{% endblock %}
